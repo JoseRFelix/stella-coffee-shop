@@ -1,0 +1,65 @@
+.btn {
+  position: relative;
+
+  &,
+  &:link,
+  &:visited {
+    border-radius: 10rem;
+    padding: 1.5rem 5rem;
+    display: inline-block;
+
+    text-transform: uppercase;
+    color: var(--primary-color-dark);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.3rem);
+  }
+
+  &--light-brown {
+    background-color: var(--primary-color-light);
+
+    &::after {
+      background-color: var(--primary-color-light);
+    }
+  }
+
+  &--white {
+    background-color: white;
+
+    &::after {
+      background-color: white;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}

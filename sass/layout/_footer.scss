@@ -1,0 +1,90 @@
+.footer {
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color) 0%,
+    var(--primary-color-dark) 100%
+  );
+
+  padding: 5rem 20rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+
+  @media only screen and (max-width: $bp-extrasmall) {
+    font-size: 1.4rem;
+  }
+
+  &__logo {
+    width: 18rem;
+    height: auto;
+
+    margin-right: 7rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    } 
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+
+    margin: 3.5rem 0;   
+
+    padding: 5rem 2rem;
+
+    border-top: solid 0.1rem var(--primary-color-light);
+    border-bottom: solid 0.1rem var(--primary-color-light);
+
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 0;
+    }    
+  }
+
+  &__item {
+    transition: transform 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 10rem;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 5rem;
+      }
+
+      @media only screen and (max-width: $bp-extrasmall) {
+        margin-right: 2rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }    
+
+    &:hover{
+      transform: rotate(5deg) scale(1.2);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--primary-color-light);
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all 0.2s;
+
+    &:hover {
+      box-shadow: 0 0.5rem 2rem rgba(black, 0.5);       
+    }
+  }
+
+  &__copyright{
+    margin-right: 7rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    }
+  }
+}

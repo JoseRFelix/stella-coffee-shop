@@ -1,0 +1,235 @@
+.section-about {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-gray-light-1);
+  height: 32vw;
+
+  padding: 5rem 20rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 12rem;
+  }
+
+  @media only screen and (max-width: $bp-smallmedium) {
+    height: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $bp-extrasmall) {
+    padding: 5rem 3rem;
+  }
+
+  &__image-box {
+    width: 100%;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-top: 3%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
+  }
+
+  &__image {
+    width: 85%;
+    height: 113%;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 120%;
+    }
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    box-shadow: 0 0.8rem 2rem rgba(black, 0.3);
+
+    animation: breathing 6s linear infinite;
+  }
+
+  &__paragraph {
+    width: 70%;
+    font-size: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      margin-top: -8%;
+    }
+  }
+
+  &__text-box {
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 85%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.section-features {
+  padding: 5rem 20rem;
+  text-align: center;
+
+  height: 38vw;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 12rem;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem 5rem;
+  }
+
+  &__feature-box {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 5%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      margin-top: -3.5rem;
+    }
+  }
+}
+
+.section-shop {
+  background-color: var(--color-gray-light-1);
+  padding: 5rem 20rem;
+
+  text-align: center;
+  height: 45vw;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem 12rem;
+    height: 100%;
+  }
+
+  &__card-box {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 2%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      margin-top: -3.5rem;
+    }
+  }
+}
+
+.section-contact {
+  padding: 5rem 20rem;
+
+  display: flex;
+  flex-direction: row;
+
+  height: 45vw;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $bp-extrasmall) {
+    padding: 5rem 10rem;
+  }
+
+  &__text-box {
+    width: 40%;
+    margin-right: 20rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 50%;
+      margin-right: 15rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__image-box {
+    position: relative;
+    @media only screen and (max-width: $bp-medium) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.4);
+    transition: transform 0.6s;
+
+    &--1 {
+      width: 60rem;
+      height: 50rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 105%;
+        height: 80%;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+      }
+    }
+
+    &--2 {
+      width: 28rem;
+      height: 35rem;
+
+      position: absolute;
+      top: 50%;
+      left: 70%;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: auto;
+        height: 50%;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        left: 75%;
+        top: 53%;
+        height: 55%;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__contact-bubbles-box {
+    @media only screen and (max-width: $bp-small) {
+      margin-top: -10%;
+    }
+  }
+}

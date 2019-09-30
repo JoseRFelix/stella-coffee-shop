@@ -1,0 +1,17 @@
+.header {
+  background-image: linear-gradient(rgba(black, 0), rgba(black, 0.7)),
+    url(../img/coffee-shop-1.jpg);
+  background-size: cover;
+  height: 77vh;
+  padding: 10rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    height: 82vh
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}

@@ -1,0 +1,82 @@
+.feature {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 15rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__image-box {
+    position: relative;
+  }
+
+  &__image {
+    border-radius: 50%;
+    width: 23rem;
+    height: 23rem;
+
+    object-fit: cover;
+    transition: transform .9s;
+
+    box-shadow: 0 0.8rem 2rem rgba(black, 0.3);
+  }
+
+  &__white-circle {
+    background-color: #fff;
+    border-radius: 50%;
+
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 0 0.8rem 2rem rgba(black, 0.3);
+    position: absolute;
+
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    cursor: pointer;
+
+    &:hover > div {
+      border: solid 0.1rem var(--primary-color-light-2);
+    }
+
+    &:hover .feature__icon {
+      fill: var(--primary-color-light-2);
+      transform: translateY(-0.3rem);
+    }
+
+    &:hover + img {
+      transform: scale(1.03);
+    }
+  }
+
+  &__ring {
+    background-color: transparent;
+    border: solid 0.1rem var(--primary-color);
+    border-radius: 50%;
+    height: 9.2rem;
+    width: 9.2rem;
+    transition: border 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: var(--primary-color);
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+  }
+}
